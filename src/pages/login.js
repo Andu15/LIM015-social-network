@@ -4,22 +4,10 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
-import firebase from '../lib/firebase.js';
+// import firebase from '../lib/firebase.js';
 
 export const login = () => {
   const view = `
-  <header id='header'>
-    <nav class='menu'>
-      <ul>
-        <li class='items'>
-          <a href='#/'>Login</a>
-        </li>
-        <li class='items'>
-          <a href='#/SignIn'>Sign In</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
   <section class='contenedorFormulario'>
     <form >
       <img src='images/laRuta-02.png' alt='La ruta logo' class='logo'/>
@@ -31,12 +19,12 @@ export const login = () => {
         <button id='logeo' type='submit' class='btnStart'>LOG IN</button>
       </div>
       <div  class='buttons'>
-        <button type='submit'class='btnStart'>SIGN IN</button>
+        <button id='signin' type='submit'class='btnStart'>SIGN IN</button>
       </div>
       <h3>Or sign in with ...</h3>
       <div class='imgFacebookGoogle'>
         <img id='facebook' src='images/facebook.png' alt='Facebook' class='iconSocial'>
-        <img id='google' src='images/google.png' alt='Google' class="iconSocial">
+        <img id='google' src='images/google.png' alt='Google' class='iconSocial'>
       </div>
     </form>
   </section>
@@ -46,39 +34,37 @@ export const login = () => {
   return divElement;
 };
 
+export const clickOnSignIn = () => {
+  const btnSign = document.getElementById('signin');
+  btnSign.addEventListener('click', () => {
+    /*SOLO REDIRIGE*/
+    window.location.hash = '#/SignIn';
+  });
+};
+
 export const logueo = () => {
-  const btnLogin = document.getElementById("logeo");
-  const btnSign = document.getElementById("submit");
+  const btnLogin = document.getElementById('logeo');
   btnLogin.addEventListener('click', (e) => {
     e.preventDefault();
-    const emailUser = document.getElementById("email").value;
-    const password = document.getElementById("password1").value;
-    const alertErrorMessage = document.getElementById("errorMessage");
-    if (emailUser === "" || password === "") {
-      alertErrorMessage.textContent = "You must log in first";
-    } else {
-      // documentacion firebase: https://firebase.google.com/docs/web/setup#available-libraries
-      // Este es el metodo de firebase para autenticar:
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(emailUser, password)
-        .then((userCredential) => {
-          // Signed in
-          const user = userCredential.user;
-          alertErrorMessage.textContent = "se conecto a firebase";
-          window.location.hash = "#/Timeline";
-          window.location.reload();
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.log(errorCode);
-          alertErrorMessage.textContent = errorMessage;
-        });
+    const alertErrorMessage = document.getElementById('errorMessage');
+    const emailUser = document.getElementById('email').value;
+    const password = document.getElementById('password1').value;
+    //criterios de aceptacion el else es que todo esta OK
+    if (emailUser === '' && password === '')
+    { alertErrorMessage.textContent =
+         'Oops 🙈, you must enter email and password!';}
+    else if (emailUser !== '' && password === '')
+    { alertErrorMessage.textContent =
+        'Oops 🙉, you should enter a correct password';}
+    else if (emailUser === '' && password !== '')
+    { alertErrorMessage.textContent =
+        'Oops 🙉, you should enter a correct email -> e.g. a@example.com';}
+    else
+    {
+      /*OJO-CASO PASA EXITOSAMENTE*/
+      alertErrorMessage.textContent = '';
+      /*OJO-AQUI DEBE CAMBIARSE EL HASH SOLO SI EL CORREO Y CONTRASENA SON CORRECTOS CON FIREBASE*/
+      window.location.hash = '#/Timeline';
     }
-  });
-  btnLogin.addEventListener('click', () => {
-    window.location.hash = "#/SignIn";
-    window.location.reload();
   });
 };
