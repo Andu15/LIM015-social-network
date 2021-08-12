@@ -18,6 +18,9 @@ export const changePages = (hash) => {
     case '#/Timeline': {
       return contentPrincipal.appendChild(components.Timeline());
     }
+    case '#/Profile': {
+      return contentPrincipal.appendChild(components.Profile());
+    }
     default:
       return contentPrincipal.appendChild(components.NotFound());
   }
