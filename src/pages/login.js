@@ -12,7 +12,7 @@ export const login = () => {
     <form >
       <img src='images/laRuta-02.png' alt='La ruta logo' class='logo'/>
       <p class='welcome'>Welcome Traveler!</p>
-      <span id='errorMessage' class='errorMessage'>ERROR</span>
+      <span id='errorMessage' class='errorMessage'></span>
       <input type='email' id='email' placeholder='✉ Email' class='input' />
       <input type='password' id='password1' placeholder='🔑 Password' class='input' minlength='6'/>
       <div class='buttons'>
