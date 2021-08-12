@@ -24,7 +24,7 @@ export const login = () => {
     <form >
       <img src='images/laRuta-02.png' alt='La ruta logo' class='logo'/>
       <p class='welcome'>Welcome Traveler!</p>
-      <span id='errorMessage'></span>
+      <span id='errorMessage' class='errorMessage'>ERROR</span>
       <input type='email' id='email' placeholder='✉ Email' class='input' />
       <input type='password' id='password1' placeholder='🔑 Password' class='input' minlength='6'/>
       <div class='buttons'>
@@ -33,7 +33,7 @@ export const login = () => {
       <div  class='buttons'>
         <button type='submit'class='btnStart'>SIGN IN</button>
       </div>
-      <h3>Or sign in with ...</h3>
+      <p>Or sign in with ...</p>
       <div class='imgFacebookGoogle'>
         <img id='facebook' src='images/facebook.png' alt='Facebook' class='iconSocial'>
         <img id='google' src='images/google.png' alt='Google' class="iconSocial">
@@ -76,9 +76,5 @@ export const logueo = () => {
           alertErrorMessage.textContent = errorMessage;
         });
     }
-  });
-  btnLogin.addEventListener('click', () => {
-    window.location.hash = "#/SignIn";
-    window.location.reload();
   });
 };

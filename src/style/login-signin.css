@@ -1,0 +1,117 @@
+/******* Import de url de fuente********/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/****Se borra el formato del navegador por defecto *****/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/******** body ********/
+body{
+    background: #F4F4F4;
+}
+/*******Contenido de login y SignIn******/
+.logo{
+    width: 40%;
+    display: block;
+    margin: auto;
+}
+
+.errorMessage{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: red;
+}
+
+input{
+    size: 25px;
+}
+
+.input{
+    display: flex;
+    border: 1px solid #ccc;
+    background-color: #C4C4C4;
+    color: #2f2f2f;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: calc(0.5em + 1vw);
+    width: 40%;
+    height: 5%;
+    margin: 3% auto;
+    padding: 1em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.btnStart{
+    border: none;
+    background-color: #4DBC4D;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    text-align: center;
+    font-style: initial;
+    font-size: calc(0.5em + 1vw);
+    width: 20%;
+    margin: 5%;
+    padding: 2%;
+}
+
+p {
+    text-align: center;
+    color: #525151;
+    margin: 2%;
+    font-weight: bold;
+}
+
+
+.imgFacebookGoogle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.iconSocial{
+    cursor: pointer;
+    margin: 0% 2%;
+    width: 8%;
+}
+/**********Diseño footer********/
+footer {
+    background-color: rgb(56, 43, 43);
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border-top: 0;
+    position: fixed;
+    bottom: 0;
+}
+.footer{
+    color: white;
+    font-size: calc(0.5em + 1vw);
+}
+/********Media queries**********/
+
+@media (min-width: 970px) {
+
+    .contenedorFormulario{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        }
+
+    .contenedorRegister{
+        display: flex;
+        justify-content: center;
+        }
+} 
