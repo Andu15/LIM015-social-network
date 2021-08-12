@@ -36,8 +36,9 @@ export const login = () => {
 
 export const clickOnSignIn = () => {
   const btnSign = document.getElementById('signin');
-  btnSign.addEventListener('click', () => {
-    /*SOLO REDIRIGE*/
+  btnSign.addEventListener('click', (e) => {
+    e.preventDefault();
+    /* SOLO REDIRIGE */
     window.location.hash = '#/SignIn';
   });
 };
@@ -61,9 +62,9 @@ export const logueo = () => {
         'Oops 🙉, you should enter a correct email -> e.g. a@example.com';}
     else
     {
-      /*OJO-CASO PASA EXITOSAMENTE*/
+      /* OJO-CASO PASA EXITOSAMENTE (SIMPLE) */
       alertErrorMessage.textContent = '';
-      /*OJO-AQUI DEBE CAMBIARSE EL HASH SOLO SI EL CORREO Y CONTRASENA SON CORRECTOS CON FIREBASE*/
+      /* OJO-AQUI DEBE CAMBIARSE EL HASH SOLO SI EL CORREO Y CONTRASENA SON CORRECTOS CON FIREBASE */
       window.location.hash = '#/Timeline';
     }
   });

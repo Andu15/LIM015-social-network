@@ -1,7 +1,7 @@
 /* eslint-disable spaced-comment */
 // Este es el punto de entrada de tu aplicacion
 import { changePages } from './routes/router.js';
-import { logueo, clickOnSignIn } from "./pages/login.js";
+import { logueo, clickOnSignIn } from './pages/login.js';
 import { register } from './pages/signIn.js';
 
 const init = () => {
