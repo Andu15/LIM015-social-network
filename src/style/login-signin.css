@@ -109,15 +109,14 @@ footer {
 /********Media queries**********/
 
 @media (min-width: 970px) {
+  .contenedorFormulario{
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      }
 
-    .contenedorFormulario{
-        width: 70%;
-        display: flex;
-        justify-content: center;
-        }
-
-    .contenedorRegister{
-        display: flex;
-        justify-content: center;
-        }
+  .contenedorRegister{
+      display: flex;
+      justify-content: center;
+      }
 } 
