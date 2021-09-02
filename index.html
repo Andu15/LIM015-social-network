@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>La ruta</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style/login-signUp.css">
+  <link rel="icon" href="./images/icono.ico">
+</head>
+
+<body>
+  <header id='header'>
+    <nav class='menu'>
+      <figure>
+      <img src="../images/Larutablanco.png" alt="subLogo" class="subLogo">
+      </figure>
+      <ul>
+        <li class='items home'>
+          <a href='#/home' class="itemNav">Inicio</a>
+        </li>
+        <li class='items login'>
+          <a href='#/login' class="itemNav">Iniciar Sesión</a>
+        </li>
+        <li class='items signUp'>
+          <a href='#/signUp' class="itemNav">Registrarse</a>
+        </li>
+        <li class='items profile' >
+          <a href='#/profile' class="itemNav">Perfil</a>
+        </li>
+        <li class='items timeline' >
+          <a href='#/timeLine' class="itemNav">Muro</a>
+        </li>
+        <li class='items logOut' >
+          <a href='#/logOut' class="itemNav">Salir</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id='content' class='content'></main>
+
+  <footer id='footer'>
+    <p class='footer'>&copy; 2021 Creado por YupiGroup - Todos los Derechos Reservados</p>
+  </footer>
+
+  <!--FIREBASE SCRIPTS-->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src='https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js'></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <!-- <script src='https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js'></script> -->
+  <script src='https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js'></script>
+  <script src='https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js'></script>
+  <script src='https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js'></script>
+
+  <script type='module' src='./firebase/firebase.js'></script>
+
+  <script type='module' src='./main.js'></script>
+</body>
+</html>
