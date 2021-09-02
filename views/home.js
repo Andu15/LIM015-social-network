@@ -10,7 +10,7 @@ export const HOME = () => {
           </div>
         </div>
         <div class="contentImgHome">
-          <img src="../images/home.png" alt="imagenHome" class="imgHome">
+          <img src="images/home.png" alt="imagenHome" class="imgHome">
       </div>
   </div>
   `;

@@ -4,7 +4,7 @@ export const LOGIN = () => {
   const view = `
   <section class='contenedorFormulario'>
     <form >
-      <img src='../images/laRuta-02.png' alt='La ruta logo' class='logo'/>
+      <img src='images/laRuta-02.png' alt='La ruta logo' class='logo'/>
       <p class='welcome'>Bienvenid@ viajer@!</p>
       <span id='errorMessage' class='errorMessage'></span>
       <input type='email' id='email' placeholder='  Correo electrónico' class='input' />
