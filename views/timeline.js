@@ -11,7 +11,7 @@ export const TIMELINE = () => {
   <section class='timeLineContainer'>
     <section class='profileContainer'>
       <figure>
-        <img id='imgUser' class='imgProfile' src="images/imgDefault3.png" alt="photoProfile" />
+        <img id='imgUser' class='imgProfile' src='images/imgDefault3.png' alt='photoProfile' />
       </figure>
       <p id='nameProfile' class='nameProfile'></p>
       <p id='status' class='status'>Estado: Viajer@ Empedernid@</p>
@@ -91,7 +91,7 @@ export const TIMELINE = () => {
             <button id='${idPost}' class='btnDelete'>&#10062;</button>
           </div>
           <div class='sectionAboutPost'>
-            <textarea name='${idPost}' disabled class='postContent'>${postInfo.post}</textarea>
+            <textarea name='${idPost}' disabled class='postContent' rows='1'>${postInfo.post}</textarea>
             <div>
               <button id='${idPost}' class='btnEdit'>&#9997;</button>
               <button id='${idPost}' class='btnSave'>&#9989;</button>

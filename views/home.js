@@ -1,5 +1,5 @@
 export const HOME = () => {
-  const view = ` 
+  const view = `
   <div class="contentHome">
     <div class="contentInfo">
       <div class="contentInfoHome">

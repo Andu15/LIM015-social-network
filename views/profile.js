@@ -4,15 +4,15 @@ export const PROFILE = () => {
   const view = `
   <section class='profileContent'>
     <figure>
-      <img id='imgUser' class='imgProfile' src="../images/imgDefault3.png" alt="photoProfile" />
+      <img id='imgUser' class='imgProfile' src="images/imgDefault3.png" alt="photoProfile" />
     </figure>
     <input type='file' id='addImage' class='addImage' accept='image/png, image/jpeg' name='mas'>
     <button type='button' ></button>
     <section class='nameStatus'>
-    <p id='nameProfile' class='nameProfile'>Ariana</p>
-    <p id='status' class='statusProfile'>Estado: Viajer@ Empedernid@</p>
+      <p id='nameProfile' class='nameProfile'>Ariana</p>
+      <p id='status' class='statusProfile'>Estado: Viajer@ Empedernid@</p>
     </section>
-    </section>
+  </section>
   <section class='aboutUser'>
     <h2>Sobre mí:</h2>
     <p class='myInfo'>Me encanta viajar</p>
@@ -34,7 +34,7 @@ export const PROFILE = () => {
   document.querySelector('.logOut a').style.display = 'block';
   // ------------------------- Foto de perfil -------------------------
   if (localStorage.getItem('userPhoto') === 'null') {
-    imgElement.src = '../images/imgDefault3.png';
+    imgElement.src = 'images/imgDefault3.png';
   } else {
     imgElement.src = localStorage.getItem('userPhoto');
   }
