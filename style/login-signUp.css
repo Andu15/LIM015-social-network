@@ -256,6 +256,13 @@ footer {
 /************************************ fin de Login y signUp  ********************************/
 
 /*********************************** Timeline************************************/
+.fa-images {
+  color: #4DBC4D;
+}
+
+.fa-comment-dots {
+  color:rgb(255, 255, 255);
+}
 
 /********MODAL********/
 /* * {box-sizing: border-box} */
@@ -268,10 +275,6 @@ button .confirm  {
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
-}
-
-button:hover {
-    opacity:1;
 }
 
 /* Float cancel and delete buttons and add an equal width */
@@ -448,6 +451,11 @@ hr {
     color: rgba(255, 255, 255, 1);
     text-align: center;
     cursor: pointer;
+}
+
+button:hover{
+  transform: scale(1.2);
+  opacity:1;
 }
 
 .postSection{

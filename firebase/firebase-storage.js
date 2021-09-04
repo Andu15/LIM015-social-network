@@ -9,13 +9,21 @@ export const uploadImg = async (file) => {
 };
 
 // METODO PARA DESCARGAR LA FOTO EN STORAGE
-export const downloadImg = () => {
-  // const storageRef = firebase.storage().ref().child(`images/${file.name}`);
-  const storageRef = firebase.storage().refFromURL(localStorage.getItem('newPhoto'));
+export const downloadImg = (file) => {
+  const pathReference = firebase.storage().ref(`images/${file.name}`);
   // Get the download URL
-  // const storageRefDownload = storageRef.getDownloadURL();
-  return storageRef;
+  const storageRefDownload = pathReference.getDownloadURL();
+  return storageRefDownload;
 };
+
+// METODO PARA DESCARGAR LA FOTO EN STORAGE
+// export const downloadImg = () => {
+// const storageRef = firebase.storage().ref().child(`images/${file.name}`);
+// const storageRef = firebase.storage().refFromURL(localStorage.getItem('newPhoto'));
+// Get the download URL
+// const storageRefDownload = storageRef.getDownloadURL();
+// return storageRef;
+// };
 
 // export const publishImg = (file) => uploadImg(file)
 //   .then(storageRef => );

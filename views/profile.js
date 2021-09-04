@@ -6,7 +6,7 @@ export const PROFILE = () => {
     <figure>
       <img id='imgUser' class='imgProfile' src="images/imgDefault3.png" alt="photoProfile" />
     </figure>
-    <input type='file' id='addImage' class='addImage' accept='image/png, image/jpeg' name='mas'>
+    <input type='file' id='addImage' class='addImage' accept='image/png, image/jpeg' aria-label="Archivo">
     <button type='button' ></button>
     <section class='nameStatus'>
       <p id='nameProfile' class='nameProfile'>Ariana</p>
@@ -45,10 +45,11 @@ export const PROFILE = () => {
     userNameProfile.textContent = localStorage.getItem('userName');
   }
   // -------------------------  Cambiar foto de perfil -------------------------
-  btnUpload.addEventListener('change', (e) => {
+  btnUpload.addEventListener('change', async (e) => {
     e.preventDefault();
     const file = e.target.files[0];
     uploadImg(file);
+    e.target.style.display = 'none';
     // console.log(downloadImg());
     // console.log(downloadImg().fullPath);
   });

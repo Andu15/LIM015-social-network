@@ -20,7 +20,7 @@ export const TIMELINE = () => {
     <section class='publication'>
       <textarea name='publication' id='textAreaPublication' class='textAreaPublication' placeholder='¿Qué deseas compartir con la comunidad de viajeros?' rows='3'></textarea>
       <div class='buttonsPost'>
-        <button id='buttonImg' type='button' class='buttonImg'>&#127889;</button>
+        <button id='buttonImg' type='button' class='buttonImg'><i class="fas fa-images"></i></button>
         <button id='buttonShare' type='submit' class='buttonShare'>Compartir</button>
       </div>
       </section>
@@ -91,7 +91,7 @@ export const TIMELINE = () => {
             <button id='${idPost}' class='btnDelete'>&#10062;</button>
           </div>
           <div class='sectionAboutPost'>
-            <textarea name='${idPost}' disabled class='postContent' rows='1'>${postInfo.post}</textarea>
+            <textarea name='${idPost}' disabled class='postContent' rows='2'>${postInfo.post}</textarea>
             <div>
               <button id='${idPost}' class='btnEdit'>&#9997;</button>
               <button id='${idPost}' class='btnSave'>&#9989;</button>
@@ -100,7 +100,7 @@ export const TIMELINE = () => {
           <div id='reactionPost' class='reactionPost'>
             <button id='${idPost}' class='btnLove'>&#x2764;&#xfe0f;</button>
             <span name='${idPost}'>${postInfo.likes.length}</span>
-            <button id='${idPost}' class='btnComments'>&#128172;</button>
+            <button id='${idPost}' class='btnComments'><i class="fas fa-comment-dots"></i></button>
             <span>0</span>
           </div>
         </section>
