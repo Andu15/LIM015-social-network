@@ -2,17 +2,21 @@ import { uploadImg } from '../firebase/firebase-storage.js';
 
 export const PROFILE = () => {
   const view = `
-  <section class='profileContent'>
-    <figure>
-      <img id='imgUser' class='imgProfile' src="images/imgDefault3.png" alt="photoProfile" />
+  <section class='contentProfile'>
+  <section class='contentImg'>
+    <figure class='figImgUser'>
+      <img id='imgUser' class='imgUser' src="images/imgDefault3.png" alt="photoProfile" />
     </figure>
-    <input type='file' id='addImage' class='addImage' accept='image/png, image/jpeg' aria-label="Archivo">
+  </section>
+  <input type='file' id='addImage' class='addImage' accept='image/png, image/jpeg'>
+    <section class='content'>
     <button type='button' ></button>
+    </section>
     <section class='nameStatus'>
       <p id='nameProfile' class='nameProfile'>Ariana</p>
       <p id='status' class='statusProfile'>Estado: Viajer@ Empedernid@</p>
     </section>
-  </section>
+    </section>
   <section class='aboutUser'>
     <h2>Sobre mí:</h2>
     <p class='myInfo'>Me encanta viajar</p>
